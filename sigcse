@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  padding: 100px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<b>In "When Are We Gonna Have a Serious Conversation About How Unserious (and Problematic) SIGCSE Is?" by Dr Nicki Washington, she argues that the SIGCSE has a large tendancy to ignore or marginalize non-white centered topics.</b>
+<p>In her section on relevance and interest, she comdemns one of her reviewer's inability to note her explicit abstract. She also calls out another reviewer's hipocracy in noting who the panel would be relevant to, but also stating how difficult to "assess how relevant it will be". She goes on to note that the quantity of information that reviewer sought was impossible to convey in a two page proposal.</p>
+<p>In her section on structure, she notes a reviewer commented on a lack of how the session would run in a hybrid format. Dr. Washington mentions that, while somewhat valid, a panel is a panel, regardless of how the panelists are present. Additionally, she mentions audience participation and how it is not a requirement of the panel. Is disregarding audience participation relevant to the panel's topic of inclusion?</p>
+<p>In her section on Grammar feedback, Dr Washington recieved a note regarding her only citation, that it appeared to have capitalization errors. Though the reviewer was incorrect (the author in question, bell hooks, very deliberately breaks the particular grammar rule of capitalizing a name and is commonly refered to in lower case), it is an unusual circumstance. Though there are other names out there that break usual english conventions (The Artist Formerly Known as Prince, or X Æ A-12 Musk come to mind), they are few and far between. Given the odds of running into an author who uses a grammar gimmick, versus the odds of a spelling mistake, is Dr. Washington's response fair?</p>
+
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(100,0);
+ctx.beginPath();
+ctx.arc(100,100,99,0,2*Math.PI);
+ctx.stroke();
+ctx.moveTo(100,2);
+ctx.lineTo(100,199);
+ctx.lineTo(1,100);
+ctx.lineTo(199,100);
+ctx.lineTo(100,1);
+ctx.stroke();
+</script>
+
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
