@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Charts Demo</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Agency', 'Latinx stops per white stop'],
+          ['Astoria PD', 1.71],
+          ['Brookings PD', 1.82],
+          ['Cannon Beach PD', 0.74],
+          ['Crook CO SO', 0.84],
+          ['Dallas PD', 0.79],
+          ['Eagle Point PD', 1.19],
+          ['Gervais PD', 3.42],
+          ['Gilliam CO SO', 0.83],
+          ['Gladstone PD', 1.68],
+          ['Hood River PD', 0.74],
+          ['Hubbard PD', 0.84],
+          ['Jefferson CO SO', 1.16],
+          ['Josephine CO SO', 0.89],
+          ['Madras PD', 0.52],
+          ['Milton-Freewater PD', 0.81],
+          ['Monmouth PD', 0.76],
+          ['Morrow CO SO', 0.96],
+          ['Mt. Angel PD', 1.08],
+          ['Newport PD', 1.19],
+          ['Pendleton PD', 0.44],
+          ['Phoenix PD', 2.46],
+          ['Prineville PD', 0.79],
+          ['Sandy PD', 2.12],
+          ['Seaside PD', 0.78],
+          ['Sherman CO SO', 1.75],
+          ['Sherwood PD', 0.86],
+          ['Silverton PD', 1.42],
+          ['Stanfield PD', 1.15],
+          ['Tillamook CO SO', 1.19],
+          ['Umatilla CO SO', 1.07],
+          ['Umatilla PD', 0.82]
+        ]);
+        var options = {
+          chartArea: {width: '70%', height: '80%'},
+          legend: {position: 'none'},
+          hAxis: {
+            title: 'Latinx stops per white stop',
+            minValue: 0,
+            textStyle: {fontSize: 12}
+          },
+          vAxis: {
+            title: 'Agency',
+            textStyle: {fontSize: 12}
+          }
+        };
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 700px;"></div>
+  </body>
+</html>
