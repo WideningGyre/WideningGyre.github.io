@@ -6,36 +6,39 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-      var data = google.visualization.arrayToDataTable([
-        ['Industry', 'Percentage of earned wages not paid'],
-        [ 'Construction', 22.9],
-        [ 'Manufacturing', 22.4],
-        [ 'Retail', 16.4],
-        [ 'Agriculture, forestry, and fishing', 20.4],
-        [ 'Wholesale', 19.5],
-        [ 'Transportation and utilities', 22.3],
-        [ 'Information', 27.9],
-        [ 'Financial activities', 28.5],
-        [ 'Professional and business', 22.2],
-        [ 'Education and health', 23.9],
-        [ 'Food and drink service', 28.8],
-        [ 'Other leisure and hospitality', 23.6],
-        [ 'Other industries ', 25.5]
-      ]);
       
-      var options = {
-        title: 'Percentage of Earned Wages Not Paid by Industry in the 10 most populous states',
-        legend: { position: 'none' },
-        hAxis: {
-          title: 'Industry'
-        },
-        vAxis: {
-          title: 'Percentage of earned wages not paid'
-        }
-      };
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Industry', 'Percentage of earned wages not paid'],
+          [ 'Construction', 22.9],
+          [ 'Manufacturing', 22.4],
+          [ 'Retail', 16.4],
+          [ 'Agriculture, forestry, and fishing', 20.4],
+          [ 'Wholesale', 19.5],
+          [ 'Transportation and utilities', 22.3],
+          [ 'Information', 27.9],
+          [ 'Financial activities', 28.5],
+          [ 'Professional and business', 22.2],
+          [ 'Education and health', 23.9],
+          [ 'Food and drink service', 28.8],
+          [ 'Other leisure and hospitality', 23.6],
+          [ 'Other industries ', 25.5]
+        ]);
 
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+        var options = {
+          title: 'Percentage of Earned Wages Not Paid by Industry in the 10 most populous states',
+          legend: { position: 'none' },
+          hAxis: {
+            title: 'Industry'
+          },
+          vAxis: {
+            title: 'Percentage of earned wages not paid'
+          }
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+      }
     </script>
   </head>
   <body>
