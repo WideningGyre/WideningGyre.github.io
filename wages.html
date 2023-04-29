@@ -8,27 +8,27 @@
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Industry', 'Percentage of earned wages not paid'],
-          ['Construction', 22.9],
-          ['Manufacturing', 22.4],
-          ['Retail', 16.4],
-          ['Agriculture, forestry, and fishing', 20.4],
-          ['Wholesale', 19.5],
-          ['Transportation and utilities', 22.3],
-          ['Information', 27.9],
-          ['Financial activities', 28.5],
-          ['Professional and business', 22.2],
-          ['Education and health', 23.9],
-          ['Food and drink service', 28.8],
-          ['Other leisure and hospitality', 23.6],
-          ['Other industries ', 25.5],
+          ['Percentage of earned wages not paid', 'Industry'],
+            [22.9, 'Construction'],
+            [22.4, 'Manufacturing'],
+            [16.4, 'Retail'],
+            [20.4, 'Agriculture, forestry, and fishing'],
+            [19.5, 'Wholesale'],
+            [22.3, 'Transportation and utilities'],
+            [27.9, 'Information'],
+            [28.5, 'Financial activities'],
+            [22.2, 'Professional and business'],
+            [23.9, 'Education and health'],
+            [28.8, 'Food and drink service'],
+            [23.6, 'Other leisure and hospitality'],
+            [25.5, 'Other industries ']
         ]);
         var options = {
           chartArea: {width: '70%', height: '80%'},
           legend: {position: 'none'},
           hAxis: {
             title: 'Industry',
-            minValue: 0,
+            minValue: 0, 
             textStyle: {fontSize: 12}
           },
           vAxis: {
@@ -42,7 +42,11 @@
     </script>
   </head>
   <body>
-    <p></p>
-      <div id="chart_div" style="width: 900px; height: 700px;"></div>
+    
+    <div id="chart_div" style="width: 900px; height: 700px;"></div>
+    <img src="WagesGraphCode" alt="WAGES graph" width = 900><br>
+    <p>These data were likely gathered ethically. The report used data gathered from the Current Population Survey, a monthly survey of households by the Bureau of Census for the Bureau of Labor Statistics.</p>
+    <a href="https://www.bls.gov/cps/documentation.htm#concepts"> The methodology is documented here. </a>
+    <p>As far as use of said data goes, it appears to be used ethically, but such data could quite easily be used unethically. Statistics can be used to lie very convincingly, and if someone used this data to diminish the importance of wage theft, that would be very unethical. However, we can tell the data was gathered and used ethically because it meets the following requirements: 1) It was gained directly from the individuals via a survey, so it respects their ownership. 2) The survey was transparent in its intended use. 3) The data was anonymized to the point of any individual being impossible to pinpoint, so their privacy was respected (though I'm not sure what precautions were taken to avoid data leaks as far as security goes). 4) The data was gathered with the intent of analyzing and producing a report in hopes of understanding and improving the average citizen's life. Data Scientists have a responsibility to gather and use data ethically because data are a very powerful tool in the correct circumstances. It can be used to cause quite a lot of harm if used improperly, and isn't immediately recognizable as being dangerous. Everyone agrees that an improperly handled firearm can ruin a life, but it's harder to see the ramifications of improperly used data, even when it might have a larger impact than a firearm.</p>
   </body>
 </html>
