@@ -6,39 +6,36 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-['Industry', 'Percentage of earned wages not paid'],
-  [22.9, 'Construction'],
-  [22.4, 'Manufacturing'],
-  [16.4, 'Retail'],
-  [20.4, 'Agriculture, forestry, and fishing'],
-  [19.5, 'Wholesale'],
-  [22.3, 'Transportation and utilities'],
-  [27.9, 'Information'],
-  [28.5, 'Financial activities'],
-  [22.2, 'Professional and business'],
-  [23.9, 'Education and health'],
-  [28.8, 'Food and drink service'],
-  [23.6, 'Other leisure and hospitality'],
-  [25.5, 'Other industries ']
-        ]);
-        var options = {
-          title: 'Percentage of earned wages not paid in the top 10 most populated states',
-          chartArea: {width: '70%', height: '80%'},
-          legend: {position: 'none'},
-          vAxis: {
-            title: 'Percentage of earned wages not paid',
-            minValue: 0, 
-            textStyle: {fontSize: 12}
-          },
-          hAxis: {
-            title: 'Industry',
-            textStyle: {fontSize: 12}
-          }
-        };
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+      var data = google.visualization.arrayToDataTable([
+        ['Industry', 'Percentage of earned wages not paid'],
+        [ 'Construction', 22.9],
+        [ 'Manufacturing', 22.4],
+        [ 'Retail', 16.4],
+        [ 'Agriculture, forestry, and fishing', 20.4],
+        [ 'Wholesale', 19.5],
+        [ 'Transportation and utilities', 22.3],
+        [ 'Information', 27.9],
+        [ 'Financial activities', 28.5],
+        [ 'Professional and business', 22.2],
+        [ 'Education and health', 23.9],
+        [ 'Food and drink service', 28.8],
+        [ 'Other leisure and hospitality', 23.6],
+        [ 'Other industries ', 25.5]
+      ]);
+  var options = {
+    title: 'Percentage of Earned Wages Not Paid by Industry',
+    legend: { position: 'none' },
+    hAxis: {
+      title: 'Industry'
+    },
+    vAxis: {
+      title: 'Percentage of earned wages not paid'
+    }
+  };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
+}
       }
     </script>
   </head>
